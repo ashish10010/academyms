@@ -18,45 +18,6 @@ class _MyProfileState extends State<MyProfile> {
   String dob = "24-09-2002";
   String profileUrl = "empty";
 
-  Container builtContainer(title, info) {
-    return Container(
-      height: 68,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              '${title}',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Row(
-              children: [
-                Text(
-                  '${info}',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Icon(
-                  Icons.edit,
-                  color: Colors.grey,
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -188,6 +149,45 @@ class _MyProfileState extends State<MyProfile> {
       ),
     );
   }
+}
+
+Container builtContainer(title, info) {
+  return Container(
+    height: 68,
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            '${title}',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Row(
+            children: [
+              Text(
+                '${info}',
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Icon(
+                Icons.edit,
+                color: Colors.grey,
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
 }
 
 Future<String> futureFunction() async {

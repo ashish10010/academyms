@@ -4,10 +4,10 @@ import 'package:Academy/model/course_card.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../model/about.dart';
 import '../model/constants.dart';
-import '../model/my_profile.dart';
-import '../model/settings.dart';
+import 'about.dart';
+import 'my_profile.dart';
+import 'settings.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,13 +17,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-   final course1 = courses[0];
-   final course2 = courses[1];
-    final course3 = courses[2];
-     final course4 = courses[3];
-   
-
+  final course1 = courses[0];
+  final course2 = courses[1];
+  final course3 = courses[2];
+  final course4 = courses[3];
 
   final docList = [
     "empty",
@@ -41,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return "empty";
   }
 
-  Container headingContainer({text, double? size}) {
+   Container headingContainer({text, double? size}) {
     return Container(
       height: 40,
       width: double.infinity,
@@ -54,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text(
-                "${text}",
+                "$text",
                 style: TextStyle(
                     fontFamily: "Poppins",
                     fontSize: size,
@@ -77,18 +74,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       "View All",
                       style: TextStyle(
                         color: Color.fromARGB(255, 55, 14, 201),
-                        fontSize: 12,
                         fontWeight: FontWeight.bold,
+                        fontSize: 12,
                       ),
                     ),
                   ),
                 )
-              : (text != "Our Courses")
+              : (text != "Our Course")
                   ? const Text(
                       "View All",
                       style: TextStyle(
                         color: Color.fromARGB(255, 55, 14, 201),
-                        fontSize: 12,
+                        fontSize: 15,
                       ),
                     )
                   : const Text(""),
@@ -272,34 +269,35 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: CourseCard(
                           title: course1['title'] as String,
                           image: course1['imageUrl'] as String,
-                          backgroundColor:  const Color.fromARGB(255, 130, 139, 139), 
+                          backgroundColor:
+                              const Color.fromARGB(255, 130, 139, 139),
                         ),
                       ),
-                  
-                       SizedBox(
+                      SizedBox(
                         height: 400,
                         child: CourseCard(
                           title: course2['title'] as String,
                           image: course2['imageUrl'] as String,
-                          backgroundColor:  const Color.fromARGB(255, 130, 139, 139), 
+                          backgroundColor:
+                              const Color.fromARGB(255, 130, 139, 139),
                         ),
                       ),
-                  
-                       SizedBox(
+                      SizedBox(
                         height: 400,
                         child: CourseCard(
                           title: course3['title'] as String,
                           image: course3['imageUrl'] as String,
-                          backgroundColor:  const Color.fromARGB(255, 130, 139, 139), 
+                          backgroundColor:
+                              const Color.fromARGB(255, 130, 139, 139),
                         ),
                       ),
-                  
-                       SizedBox(
+                      SizedBox(
                         height: 400,
                         child: CourseCard(
                           title: course4['title'] as String,
                           image: course4['imageUrl'] as String,
-                          backgroundColor:  const Color.fromARGB(255, 130, 139, 139), 
+                          backgroundColor:
+                              const Color.fromARGB(255, 130, 139, 139),
                         ),
                       ),
                     ],

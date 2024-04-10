@@ -25,7 +25,7 @@ class _RegisterState extends State<Register> {
         ),
       Scaffold(
        backgroundColor: Colors.transparent,
-        body: Container(
+        body: SizedBox(
           height: double.infinity,
           width: double.infinity,
           child: SingleChildScrollView(
