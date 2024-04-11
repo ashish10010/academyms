@@ -3,8 +3,8 @@
 import 'package:Academy/model/course_card.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
-import '../model/constants.dart';
+import '../model/navdrawer.dart';
+import '../utilis/constants.dart';
 import 'about.dart';
 import 'my_profile.dart';
 import 'settings.dart';
@@ -165,10 +165,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      // drawer: NewDrawer(
-      //   username : firstName,
-      //   email: email,
-      // ),
+      drawer: NavDrawer(
+        username : firstName,
+        email: email,
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

@@ -1,5 +1,5 @@
-import 'package:Academy/model/reusable.dart';
 import 'package:Academy/screens/home_screen.dart';
+import 'package:Academy/utilis/reusable.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
