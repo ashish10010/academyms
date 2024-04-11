@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return "empty";
   }
 
-   Container headingContainer({text, double? size}) {
+  Container headingContainer({text, double? size}) {
     return Container(
       height: 40,
       width: double.infinity,
