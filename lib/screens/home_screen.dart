@@ -4,7 +4,7 @@ import 'package:Academy/model/course_card.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../model/constants.dart';
+import '../utilis/constants.dart';
 import 'about.dart';
 import 'my_profile.dart';
 import 'settings.dart';
